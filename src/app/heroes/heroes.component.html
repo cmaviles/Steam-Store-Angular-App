@@ -1,0 +1,21 @@
+<h2>Top Steam Games</h2>
+
+<div>
+  <label for="new-hero">Video Games: </label>
+  <input id="new-hero" #heroName />
+
+  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add Selected Video Game
+  </button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button type="button" class="delete" title="delete video game"
+      (click)="delete(hero)">x</button>
+  </li>
+</ul>
+

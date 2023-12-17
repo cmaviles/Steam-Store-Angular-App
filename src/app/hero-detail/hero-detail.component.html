@@ -1,0 +1,15 @@
+<!-- hero-detail.component.html -->
+
+<div *ngIf="hero">
+  <h2>Game Name: {{hero.name | uppercase}} </h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label for="hero-name">Title: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Video Game Name"/>
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+  <button type="button" (click)="save()">save</button>
+  <button type="button" (click)="showPrice()">Price</button>
+  <!-- New "Add to Wishlist" button -->
+  <button type="button" (click)="addToWishlist()">Add to Wishlist</button>
+</div>
